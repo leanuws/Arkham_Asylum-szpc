@@ -16,3 +16,9 @@ A idéia é ser semelhante as biográfias presentes no jogo Batman Arkham Asylum
 ![image](https://github.com/RLeanF/Arkham_Asylum-szpc/assets/81381897/65c76cbf-17d7-4a9d-87f1-48521e60ffd3)
 
 ## O responsivo do site não está um dos melhores, foi o máximo que consegui chegar
+
+---
+
+## 🕯️ Liber Mortis (pasta `liber-mortis/`)
+Jogo mobile gótico de gato-e-rato entre uma assassina com um grimório e um detetive sem nome.
+Abra `liber-mortis/index.html` no navegador do celular. Escolha ser **A Sentença** (assassina) ou **Corvo** (detetive); a IA joga o outro lado.
