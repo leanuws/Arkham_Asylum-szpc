@@ -16,3 +16,10 @@ A idéia é ser semelhante as biográfias presentes no jogo Batman Arkham Asylum
 ![image](https://github.com/RLeanF/Arkham_Asylum-szpc/assets/81381897/65c76cbf-17d7-4a9d-87f1-48521e60ffd3)
 
 ## O responsivo do site não está um dos melhores, foi o máximo que consegui chegar
+
+---
+
+## 🕯️ Liber Mortis (pasta `liber-mortis/`)
+Fan game RPG gótico no estilo dos portáteis 8-bit: explore a cidade de Vel Noctis, converse com NPCs e vença duelos de palavras em turnos.
+Jogue como **A Sentença** (descubra nomes de criminosos e trace-os no grimório com o dedo) ou como **Corvo** (cruze boatos e agendas para desmascarar a assassina).
+Abra `liber-mortis/index.html` no celular. Controles na tela: direcional, A, B e START. No teclado: setas, Z, X e P.

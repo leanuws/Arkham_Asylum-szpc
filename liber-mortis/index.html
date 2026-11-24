@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#120a10">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Liber Mortis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="console">
+  <div class="bezel">
+    <div class="bezel-top"><span class="led" id="led"></span><span>LIBER · MORTIS</span></div>
+    <canvas id="screen" width="160" height="144"></canvas>
+  </div>
+  <div class="brand">✠ Noctis <i>Color</i></div>
+  <div class="controls">
+    <div class="dpad" id="dpad">
+      <div class="dp up"></div><div class="dp left"></div><div class="dp mid"></div><div class="dp right"></div><div class="dp down"></div>
+    </div>
+    <div class="ab">
+      <button class="btn-b" data-k="B">B</button>
+      <button class="btn-a" data-k="A">A</button>
+    </div>
+  </div>
+  <div class="ss">
+    <button data-k="SELECT"><span></span>SELECT</button>
+    <button data-k="START"><span></span>START</button>
+  </div>
+</div>
+<script src="sprites.js"></script>
+<script src="gb.js"></script>
+</body>
+</html>
