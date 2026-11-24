@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rastreador de Hábitos</title>
+  <meta name="description" content="Rastreador de hábitos com escada de recompensas e mapa de evolução por pilares.">
+  <meta name="theme-color" content="#8E1B1B">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Hábitos">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-row">
+      <svg class="d20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7z M12 2v6 M3 7l9 1 9-1 M12 8l-6 9h12z M3 17l3 0 M21 17h-3 M12 22v-5"/></svg>
+      <h1 id="title">Rastreador de Hábitos</h1>
+      <svg class="d20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7z M12 2v6 M3 7l9 1 9-1 M12 8l-6 9h12z M3 17l3 0 M21 17h-3 M12 22v-5"/></svg>
+    </div>
+    <div class="rule"><span></span></div>
+    <div class="month-switch">
+      <button class="icon-btn" data-act="prev-month" aria-label="Mês anterior">‹</button>
+      <button class="month-label" data-act="this-month" id="monthLabel" aria-label="Ir para o mês atual"></button>
+      <button class="icon-btn" data-act="next-month" aria-label="Próximo mês">›</button>
+    </div>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <nav class="tabbar" aria-label="Seções">
+    <button data-tab="hoje"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m7.5 12.5 3 3 6-6.5"/></svg><span>Hoje</span></button>
+    <button data-tab="mes"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 13h2M14 13h2M8 17h2M14 17h2"/></svg><span>Mês</span></button>
+    <button data-tab="progresso"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><path d="m4 15 4-5 4 3 4-7 4 4"/></svg><span>Progresso</span></button>
+    <button data-tab="evolucao"><svg viewBox="0 0 24 24"><path d="M12 2 21 7v10l-9 5-9-5V7z"/><path d="M12 7l5 3-1 5-4 2-4-3 0-4z"/></svg><span>Evolução</span></button>
+    <button data-tab="ajustes"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span>Ajustes</span></button>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
