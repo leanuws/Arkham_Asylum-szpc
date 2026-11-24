@@ -3,99 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#07060a">
+<meta name="theme-color" content="#120a10">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <title>Liber Mortis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="app">
-  <!-- TELA TÍTULO -->
-  <section id="scr-title" class="screen active">
-    <div class="moon"></div>
-    <svg class="cathedral" viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <path d="M0 220 V150 L20 150 L20 120 L30 100 L40 120 L40 150 L70 150 L70 90 L85 50 L100 90 L100 150 L130 150 L130 110 L140 95 L150 110 L150 150
-               L165 150 L165 70 L185 20 L200 0 L215 20 L235 70 L235 150 L250 150 L250 110 L260 95 L270 110 L270 150 L300 150 L300 90 L315 50 L330 90 L330 150
-               L360 150 L360 120 L370 100 L380 120 L380 150 L400 150 V220 Z" fill="#050407"/>
-      <circle cx="200" cy="95" r="16" fill="#3a0812" stroke="#8a1424" stroke-width="2"/>
-      <path d="M200 79 V111 M184 95 H216 M189 84 L211 106 M211 84 L189 106" stroke="#8a1424" stroke-width="1.5"/>
-      <rect x="192" y="125" width="16" height="25" rx="8" fill="#1a0408"/>
-      <rect x="80" y="100" width="10" height="20" rx="5" fill="#2a0810"/>
-      <rect x="310" y="100" width="10" height="20" rx="5" fill="#2a0810"/>
-    </svg>
-    <div class="embers" aria-hidden="true"></div>
-    <div class="title-wrap">
-      <p class="pre">um duelo de nomes e rostos</p>
-      <h1 class="logo">Liber<br>Mortis</h1>
-      <div class="title-duo">
-        <div class="duo duo-det"></div>
-        <div class="duo-vs">✠</div>
-        <div class="duo duo-kil"></div>
-      </div>
-      <div class="menu">
-        <button class="btn btn-blood" data-role="killer">Ser <b>A Sentença</b><small>a assassina do grimório</small></button>
-        <button class="btn btn-ash" data-role="detective">Ser <b>Corvo</b><small>o detetive sem nome</small></button>
-        <button class="btn btn-ghost" id="btn-howto">Como jogar</button>
-      </div>
+<div id="console">
+  <div class="bezel">
+    <div class="bezel-top"><span class="led" id="led"></span><span>LIBER · MORTIS</span></div>
+    <canvas id="screen" width="160" height="144"></canvas>
+  </div>
+  <div class="brand">✠ Noctis <i>Color</i></div>
+  <div class="controls">
+    <div class="dpad" id="dpad">
+      <div class="dp up"></div><div class="dp left"></div><div class="dp mid"></div><div class="dp right"></div><div class="dp down"></div>
     </div>
-  </section>
-
-  <!-- COMO JOGAR -->
-  <section id="scr-howto" class="screen">
-    <div class="paper scroll">
-      <h2>O Jogo dos Nomes</h2>
-      <p>Na cidade de <b>Vel Noctis</b> vivem 12 cidadãos. Um deles encontrou o <b>Liber Mortis</b>: um grimório que só aceita nomes de quem a cidade já condenou — e cobra a hora exata em que cada nome é escrito. A cidade a chama de <b>A Sentença</b>.</p>
-      <p>Do outro lado está <b>Corvo</b>, um detetive que esconde o próprio nome. Os dois querem a mesma coisa: <b>descobrir quem o outro é</b>.</p>
-      <h3>✠ A Sentença</h3>
-      <ul>
-        <li>À noite, escolha um criminoso que apareceu na TV e <b>trace o nome dele com o dedo</b> no grimório.</li>
-        <li>Você só pode escrever nos horários em que está <b>sozinha</b> — e cada horário de morte é uma pista para Corvo.</li>
-        <li>Gaste <b>tinta</b> para atrasar a morte e esconder a hora.</li>
-        <li>Criminosos <b>locais</b> só passam na TV do seu bairro: matá-los revela onde você mora. Cuidado: Corvo pode plantar <b>iscas</b>.</li>
-        <li>Noctua sussurra quando sente que você está <b>vigiada</b>. Escrever sob vigilância = prisão. Mas Noctua às vezes se engana…</li>
-        <li><b>Vença</b> com 7 julgamentos, ou descobrindo as 6 letras do nome verdadeiro de Corvo e escrevendo-o.</li>
-      </ul>
-      <h3>✠ Corvo</h3>
-      <ul>
-        <li>Você tem <b>2 ações por dia</b>: <b>Interrogar</b> (revela a agenda), <b>Vigiar</b> (alguém durante a noite) e <b>Isca</b> (2 ações: um criminoso falso exibido só num bairro).</li>
-        <li>Cruze as <b>horas das mortes</b> com as agendas: quem estava ocupado não pode ter escrito.</li>
-        <li>Uma noite <b>sem mortes</b> enquanto você vigiava alguém é muito suspeita…</li>
-        <li>Cada interrogatório mostra seu rosto. Se for a assassina, ela aprende letras do seu nome.</li>
-        <li><b>Acuse</b> segurando o botão. Errar duas vezes destrói sua credibilidade.</li>
-      </ul>
-      <button class="btn btn-blood" data-go="scr-title">Voltar</button>
+    <div class="ab">
+      <button class="btn-b" data-k="B">B</button>
+      <button class="btn-a" data-k="A">A</button>
     </div>
-  </section>
-
-  <!-- JOGO -->
-  <section id="scr-game" class="screen">
-    <header class="hud">
-      <div class="hud-day"><span id="hud-phase">Dia</span> <b id="hud-daynum">1</b><small>/12</small></div>
-      <div class="hud-stats" id="hud-stats"></div>
-    </header>
-    <main id="stage"></main>
-  </section>
-
-  <!-- FIM -->
-  <section id="scr-end" class="screen">
-    <div class="end-wrap">
-      <div class="end-art" id="end-art"></div>
-      <h2 id="end-title"></h2>
-      <p id="end-text"></p>
-      <button class="btn btn-blood" id="btn-again">Jogar de novo</button>
-      <button class="btn btn-ghost" data-go="scr-title">Menu</button>
-    </div>
-  </section>
-
-  <div id="sheet" class="sheet hidden"><div class="sheet-card" id="sheet-card"></div></div>
-  <div id="flash" class="flash"></div>
-  <div id="toast" class="toast"></div>
+  </div>
+  <div class="ss">
+    <button data-k="SELECT"><span></span>SELECT</button>
+    <button data-k="START"><span></span>START</button>
+  </div>
 </div>
 <script src="sprites.js"></script>
-<script src="game.js"></script>
+<script src="gb.js"></script>
 </body>
 </html>

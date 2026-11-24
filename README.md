@@ -20,5 +20,6 @@ A idéia é ser semelhante as biográfias presentes no jogo Batman Arkham Asylum
 ---
 
 ## 🕯️ Liber Mortis (pasta `liber-mortis/`)
-Jogo mobile gótico de gato-e-rato entre uma assassina com um grimório e um detetive sem nome.
-Abra `liber-mortis/index.html` no navegador do celular. Escolha ser **A Sentença** (assassina) ou **Corvo** (detetive); a IA joga o outro lado.
+Fan game RPG gótico no estilo dos portáteis 8-bit: explore a cidade de Vel Noctis, converse com NPCs e vença duelos de palavras em turnos.
+Jogue como **A Sentença** (descubra nomes de criminosos e trace-os no grimório com o dedo) ou como **Corvo** (cruze boatos e agendas para desmascarar a assassina).
+Abra `liber-mortis/index.html` no celular. Controles na tela: direcional, A, B e START. No teclado: setas, Z, X e P.
